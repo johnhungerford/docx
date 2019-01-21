@@ -157,7 +157,7 @@ describe("File", () => {
         it("should call the underlying document's createFootnote", () => {
             const wrapper = new File();
             const spy = sinon.spy(wrapper.FootNotes, "createFootNote");
-            wrapper.createFootnote(new Paragraph(""));
+            wrapper.createFootnote([new Paragraph("")]);
 
             expect(spy.called).to.equal(true);
         });

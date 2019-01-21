@@ -20,8 +20,10 @@ export class Footnote extends XmlComponent {
         );
     }
 
-    public addParagraph(paragraph: Paragraph): void {
-        paragraph.addRunToFront(new FootnoteRefRun());
-        this.root.push(paragraph);
+    public addParagraphs(paragraphs: Paragraph[]): void {
+        paragraphs[0].addRunToFront(new FootnoteRefRun());
+        for(let i = 0; i < paragraphs.length; i++) {
+            this.root.push(paragraphs[i]);
+        }
     }
 }

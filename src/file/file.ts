@@ -182,8 +182,8 @@ export class File {
         this.document.Body.addSection(sectionPropertiesOptions);
     }
 
-    public createFootnote(paragraph: Paragraph): void {
-        this.footNotes.createFootNote(paragraph);
+    public createFootnote(paragraphs: Paragraph[]): void {
+        this.footNotes.createFootNote(paragraphs);
     }
 
     public createHeader(): HeaderWrapper {
